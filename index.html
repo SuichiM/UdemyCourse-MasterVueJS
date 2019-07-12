@@ -32,18 +32,18 @@
         <div class="col-md-6">
           <label>From</label>
           <select class="form-control">
-            <option value="Currecy">Currency</option>
-            <option value="Currecy">Currency</option>
-            <option value="Currecy">Currency</option>
+            <option value="" v-for="currency in formatedCurrencies"> 
+              {{ currency.currencyName }}
+            </option>
           </select>
         </div>
         
         <div class="col-md-6">
             <label>To</label>
           <select class="form-control">
-            <option value="Currecy">Currency</option>
-            <option value="Currecy">Currency</option>
-            <option value="Currecy">Currency</option>
+              <option value="" v-for="currency in formatedCurrencies"> 
+                  {{ currency.currencyName }}
+                </option>  
           </select>
         </div>
       
@@ -71,7 +71,8 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>
